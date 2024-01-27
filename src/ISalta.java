@@ -1,3 +1,3 @@
-public interface ISalta {
+public interface ISaltar {
 
 }
