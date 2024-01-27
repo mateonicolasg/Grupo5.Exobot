@@ -1,3 +1,4 @@
-public interface IDisparar {
+public interface IDispara {
 
+    public void ftDispara();
 }
