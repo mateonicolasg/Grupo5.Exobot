@@ -1,42 +1,44 @@
 public class SMExtremidadInferior implements FTICorre, FTISalta{
     private int smCapacidadSalto;
     private int smCapacidadCorrida;
+
     //Getter y setter
-    public int smGetSmCapacidadSalto() {
-        return smCapacidadSalto;
-    }
+    // public int smGetSmCapacidadSalto() {
+    //     return smCapacidadSalto;
+    // }
 
-    public void smSetSmCapacidadSalto(int smCapacidadSalto) {
-        this.smCapacidadSalto = smCapacidadSalto;
-    }
+    // public void smSetSmCapacidadSalto(int smCapacidadSalto) {
+    //     this.smCapacidadSalto = smCapacidadSalto;
+    // }
 
-    public int smGetSmCapacidadCorrida() {
-        return smCapacidadCorrida;
-    }
+    // public int smGetSmCapacidadCorrida() {
+    //     return smCapacidadCorrida;
+    // }
 
-    public void smSetSmCapacidadCorrida(int smCapacidadCorrida) {
-        this.smCapacidadCorrida = smCapacidadCorrida;
-    }
+    // public void smSetSmCapacidadCorrida(int smCapacidadCorrida) {
+    //     this.smCapacidadCorrida = smCapacidadCorrida;
+    // }
 
-    public SMExtremidadInferior(int smCapacidadSalto, int smCapacidadCorrida) {
-        this.smCapacidadSalto = smCapacidadSalto;
-        this.smCapacidadCorrida = smCapacidadCorrida;
-    }
-
-    @Override
-    public void ftSaltar() {
-        if (smCapacidadSalto > 50)
-            System.out.println("Me es imposible saltar " + smGetSmCapacidadSalto() + " m");
-        else
-            System.out.println("Estoy saltando " + smGetSmCapacidadSalto()+ " m");
+    // Constructor
+    public SMExtremidadInferior() {
+        this.smCapacidadSalto = 50;
+        this.smCapacidadCorrida = 200;
     }
 
     @Override
-    public void ftCorrer() {
-        if (smCapacidadSalto > 200)
-            System.out.println("Me es imposible correr a" + smGetSmCapacidadSalto() + " km/h");
+    public void ftSaltar(int smSaltoRequerido) {
+        if (smSaltoRequerido >= 50)
+            System.out.println("Me es imposible saltar " + smSaltoRequerido + " m");
         else
-            System.out.println("Estoy corriendo a " + smGetSmCapacidadCorrida() + " km/h");
+            System.out.println("Estoy saltando " + smSaltoRequerido + " m");
+    }
+
+    @Override
+    public void ftCorrer(int smVelocidadRequerida) {
+        if (smVelocidadRequerida >= 200)
+            System.out.println("Me es imposible correr a " + smVelocidadRequerida + " km/h");
+        else
+            System.out.println("Estoy corriendo a " + smVelocidadRequerida + " km/h");
     }
 
 }

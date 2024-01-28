@@ -1,6 +1,7 @@
 public class SMApp {
     private static SMPatBattle smPatBattle;
-    public static void smMain(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
+        smPatBattle = new SMPatBattle();
         smPatBattle.smMostrarPeloton();
     }
 }
