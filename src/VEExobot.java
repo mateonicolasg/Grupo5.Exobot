@@ -1,18 +1,11 @@
-public abstract class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
-    private String veCodigo;
+import java.util.Hashtable;
 
-    // getter y setter
-    public String getCodigo() {
-        return veCodigo;
-    }
-    
-    public void setCodigo(String veCodigo) {
-        this.veCodigo = veCodigo;
-    }    
+public abstract class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
+    private int veCodigoSeguridad; 
 
     // constructor    
-    public VEExobot(String veCodigo) {
-        this.veCodigo = veCodigo;
+    public VEExobot(int veCodigoSeguridad) {
+        this.veCodigoSeguridad = veCodigoSeguridad;
     }
 
     // metodos
@@ -28,9 +21,11 @@ public abstract class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
         System.out.println("potencializando movimiento del soldado");
     }
 
-    public void veRealizarMision(String veCodigoMision){
-        
-        
+    public void veRealizarMision(int veCodigoMision, Hashtable<Integer, String> smMisiones){
+        smMisiones.forEach((smK,smV)->{
+            if (veCodigoMision == smK)
+                System.out.println("Exobot tiene que " + smV);
+        });
     }
 
     @Override

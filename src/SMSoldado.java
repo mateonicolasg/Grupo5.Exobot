@@ -33,8 +33,8 @@ public class SMSoldado {
         System.out.println("reemplazando fuente de poder deteriorada de exobot");
     }
 
-    public void veSacrificarExtremidad(String extremidad){
-        System.out.println("sacrificar extremidad " + extremidad);
+    public void veSacrificarExtremidad(){
+        System.out.println("sacrificar extremidades inferiores ");
     }
      
 
