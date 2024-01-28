@@ -1,4 +1,4 @@
-public interface IAprendeEspanol {
+public interface FTIAlumnoEspanol {
 
     public void ftAprenderEspanol();
 

@@ -1,3 +1,3 @@
-public abstract class Exobot implements IAprendeEspanol, IAprendeIngles {
+public abstract class Exobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
 
 }
