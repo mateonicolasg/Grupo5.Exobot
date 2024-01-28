@@ -1,4 +1,4 @@
 public interface FTIAlumnoIngles {
 
-    public void ftAprenderIngles();
+    public String ftAprenderIngles();
 }

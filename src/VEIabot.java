@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class Iabot {
+public class VEIabot {
     private ArrayList<String> lstCodigoAccion;
     private ArrayList<String> lstCodigoUnico;
 
     // constructor
-    public Iabot() {
+    public VEIabot() {
         lstCodigoAccion = new ArrayList<>();
         lstCodigoUnico = new ArrayList<>();
     }
