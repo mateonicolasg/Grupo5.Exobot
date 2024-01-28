@@ -17,6 +17,7 @@ public class VEMecatronico {
     public VEMecatronico(ArrayList<String> smLstHabilidades) {
         this.smLstHabilidades = smLstHabilidades;
     }
+    public VEMecatronico(){}
 
     // Metodos
 
