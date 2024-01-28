@@ -1,4 +1,4 @@
-public interface IVuela {
+public interface FTIVuela {
 
     public void ftvolar();
 }

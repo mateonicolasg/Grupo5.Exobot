@@ -1,4 +1,4 @@
-public interface ICorre {
+public interface FTICorre {
 
     public void ftCorrer();
 }

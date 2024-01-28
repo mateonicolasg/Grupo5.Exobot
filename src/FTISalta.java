@@ -1,4 +1,4 @@
-public interface ISalta {
+public interface FTISalta {
 
     public void ftSaltar();
 
