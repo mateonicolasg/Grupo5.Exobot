@@ -1,5 +1,5 @@
 public interface FTIAlumnoEspanol {
 
-    public void ftAprenderEspanol();
+    public String ftAprenderEspanol();
 
 }
