@@ -1,4 +1,4 @@
 public interface FTIVuela {
 
-    public void ftvolar();
+    public void ftVolar(SMFuentePoder smFuentePoder);
 }
