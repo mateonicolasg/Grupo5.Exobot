@@ -1,4 +1,4 @@
-public class TurboReactor implements FTIVuela {
+public class SMTurboReactor implements FTIVuela {
 
     @Override
     public void ftVolar(SMFuentePoder smFuentePoder) {
