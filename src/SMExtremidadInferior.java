@@ -27,7 +27,7 @@ public class SMExtremidadInferior implements FTICorre, FTISalta{
 
     @Override
     public void ftSaltar(int smSaltoRequerido) {
-        if (smSaltoRequerido >= 50)
+        if (smSaltoRequerido > 50)
             System.out.println("Me es imposible saltar " + smSaltoRequerido + " m");
         else
             System.out.println("Estoy saltando " + smSaltoRequerido + " m");
@@ -35,7 +35,7 @@ public class SMExtremidadInferior implements FTICorre, FTISalta{
 
     @Override
     public void ftCorrer(int smVelocidadRequerida) {
-        if (smVelocidadRequerida >= 200)
+        if (smVelocidadRequerida > 200)
             System.out.println("Me es imposible correr a " + smVelocidadRequerida + " km/h");
         else
             System.out.println("Estoy corriendo a " + smVelocidadRequerida + " km/h");
