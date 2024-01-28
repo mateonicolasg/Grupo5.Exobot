@@ -8,13 +8,22 @@ public class VEIabot {
     private Hashtable<Integer, String> smMisiones;
     private int smCodigoSeguridad;
     private int smSerieUnica;
+    private SMFuentePoder smFuentePoder;
 
     // Getter y setter
-    public int SMGetSmSerieUnica() {
+    public SMFuentePoder smGetSmFuentePoder() {
+        return smFuentePoder;
+    }
+
+    public void smSetSmFuentePoder(SMFuentePoder smFuentePoder) {
+        this.smFuentePoder = smFuentePoder;
+    }
+
+    public int smGetSmSerieUnica() {
         return smSerieUnica;
     }
 
-    public void SMSetSmSerieUnica(int smSerieUnica) {
+    public void smSetSmSerieUnica(int smSerieUnica) {
         this.smSerieUnica = smSerieUnica;
     }
     public int smGetSmCodigoSeguridad() {
@@ -24,45 +33,25 @@ public class VEIabot {
     public void smSetSmCodigoSeguridad(int smCodigoSeguridad) {
         this.smCodigoSeguridad = smCodigoSeguridad;
     }
-    public Hashtable<Integer, String> getSmMisiones() {
+
+    public Hashtable<Integer, String> smGetSmMisiones() {
         return smMisiones;
     }
 
-    public void setSmMisiones(Hashtable<Integer, String> smMisiones) {
+    public void smSetSmMisiones(Hashtable<Integer, String> smMisiones) {
         this.smMisiones = smMisiones;
     }
 
     // Constructor
     public VEIabot(Hashtable<Integer, String> smMisiones) {
-        this.smMisiones = new Hashtable<>();
-
-        // Va en el App
-        smMisiones.put(1234,"atacar");
-        smMisiones.put(5678,"defender");
-        smMisiones.put(9101,"sabotaje");
-        smMisiones.put(1213,"infiltracion");
-        smMisiones.put(1415,"rescate");
+        this.smMisiones = smMisiones;
     }
 
 
-    // metodos
-    public int smOtorgarCodigoSeguridad(int smCodigo){
-        return smCodigo;
-    }
-
-    public int smAsignarSerieUnica (int smSerieUnica){
-        return smSerieUnica;
-    }                   
+    // metodos                  
     
     public ArrayList <SMIArma> smAsignarArmas(ArrayList <SMIArma> smArmas){
         return smArmas;
     }
-
-    
-    public void implementarIdioma() {
-
-    }
-
-
 
 }
