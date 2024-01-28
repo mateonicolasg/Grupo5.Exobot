@@ -49,12 +49,13 @@ public class VEMecatronico {
         }  
         VEExobot smExobot = new VEExobot(smCodigo, smSerieUnica, smExtremidadInferior, smTurboReactor, smFuentePoder, smBrazoDerecho, smBrazoIzquierdo);
         return smExobot;
+
     }
 
-
+    
 
     public void asignarCodigo(String codigo){
         System.out.println("asignando" + codigo + " unico a Exobot");
     }
 
-}
+}   

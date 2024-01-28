@@ -3,5 +3,9 @@ public class SMApp {
     public static void main(String[] args) throws Exception {
         smPatBattle = new SMPatBattle();
         smPatBattle.smMostrarPeloton();
+        smPatBattle.VEmostrarPelotonDefender();
+        smPatBattle.VEmostrarPelotonSabotear();
+        smPatBattle.VEmostrarPelotonInfiltracion();
+        smPatBattle.VEmostrarPelotonRescate();
     }
 }
