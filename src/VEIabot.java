@@ -6,14 +6,22 @@ public class VEIabot {
     // private ArrayList<String> lstCodigoUnico;
 
     private Hashtable<Integer, String> smMisiones;
-    private String smCodigoSeguridad;
+    private int smCodigoSeguridad;
+    private int smSerieUnica;
 
     // Getter y setter
-    public String smGetSmCodigoSeguridad() {
+    public int SMGetSmSerieUnica() {
+        return smSerieUnica;
+    }
+
+    public void SMSetSmSerieUnica(int smSerieUnica) {
+        this.smSerieUnica = smSerieUnica;
+    }
+    public int smGetSmCodigoSeguridad() {
         return smCodigoSeguridad;
     }
 
-    public void smSetSmCodigoSeguridad(String smCodigoSeguridad) {
+    public void smSetSmCodigoSeguridad(int smCodigoSeguridad) {
         this.smCodigoSeguridad = smCodigoSeguridad;
     }
     public Hashtable<Integer, String> getSmMisiones() {
@@ -41,7 +49,14 @@ public class VEIabot {
     public int smOtorgarCodigoSeguridad(int smCodigo){
         return smCodigo;
     }
-                                    
+
+    public int smAsignarSerieUnica (int smSerieUnica){
+        return smSerieUnica;
+    }                   
+    
+    public ArrayList <SMIArma> smAsignarArmas(ArrayList <SMIArma> smArmas){
+        return smArmas;
+    }
 
     
     public void implementarIdioma() {

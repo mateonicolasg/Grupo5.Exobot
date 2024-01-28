@@ -6,8 +6,8 @@ public class SMLanzaFuego implements FTIDispara, SMIArma {
     }
 
     @Override
-    public void smObtenerEnergia() {
-        System.out.println("Lanza fuego obteniendo energia");
+    public void smObtenerEnergia(SMFuentePoder smFuentePoder) {
+        System.out.println("Lanza fuego obteniendo energia y con potencia " + smFuentePoder.smGetSmNivelEnergia());
     }
-    
+
 }

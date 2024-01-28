@@ -2,7 +2,7 @@ public class SMSoldado {
     private String veFuerza; 
     private String veHabilidad; 
     private String veMovimientoFisico;
-
+    private VEExobot smExobot; 
 
     // Getter y Setter
     public String getFuerza() {
@@ -24,6 +24,11 @@ public class SMSoldado {
         this.veMovimientoFisico = veMovimientoFisico;
     } 
 
+    // constructor
+    public SMSoldado(VEExobot smExobot) {
+        this.smExobot = smExobot;
+    }
+    
     // metodos
     public void smRecargarFuentePoder(VEIabot veIabot){
         System.out.println("recargando fuente de poder agotada de exobot");
