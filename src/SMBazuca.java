@@ -6,7 +6,7 @@ public class SMBazuca implements FTIDispara, SMIArma {
     }
 
     @Override
-    public void smObtenerEnergia() {
+    public void smObtenerEnergia(SMFuentePoder smFuentePoder) {
         System.out.println("Bazuca obteniendo energia");
     }
 
