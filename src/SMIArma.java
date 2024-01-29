@@ -1,3 +1,3 @@
 public interface SMIArma {
-    public void smObtenerEnergia(ASFuentePoder smFuentePoder);
+    public void smObtenerEnergia(ASFuentePoder asFuentePoder);
 }
