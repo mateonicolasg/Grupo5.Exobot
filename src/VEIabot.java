@@ -9,7 +9,6 @@ public class VEIabot {
     private Set<Integer> smSeriesUnicas;
     private int smCodigoSeguridad;
     private int smSerieUnica;
-<<<<<<< HEAD
     private SMFuentePoder smFuentePoder;
 
     public VEIabot(Hashtable<Integer, String> smMisiones) {
@@ -19,18 +18,10 @@ public class VEIabot {
 
     public SMFuentePoder smGetSmFuentePoder() {
         return smFuentePoder;
-=======
-    private ASFuentePoder asFuentePoder;
-    private Set<Integer> smSeriesUnicas;
-
-    // Getter y setter
-    public ASFuentePoder asGetAsFuentePoder() {
-        return asFuentePoder;
->>>>>>> 72580bf0ff6779fd7caa7936dc4649d931eaa70e
     }
 
-    public void asSetAsFuentePoder(ASFuentePoder asFuentePoder) {
-        this.asFuentePoder = asFuentePoder;
+    public void smSetSmFuentePoder(SMFuentePoder smFuentePoder) {
+        this.smFuentePoder = smFuentePoder;
     }
 
     public int smGetSmSerieUnica() {

@@ -6,7 +6,7 @@ public class SMLaser implements FTIDispara, SMIArma {
     }
  
     @Override
-    public void smObtenerEnergia(ASFuentePoder asFuentePoder) {
-        System.out.println("Laser obteniendo energia y con potencia " + asFuentePoder.asGetAsNivelEnergia());
+    public void smObtenerEnergia(SMFuentePoder smFuentePoder) {
+        System.out.println("Laser obteniendo energia y con potencia " + smFuentePoder.smGetSmNivelEnergia());
     }
 }
