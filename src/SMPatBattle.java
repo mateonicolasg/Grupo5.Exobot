@@ -2,125 +2,215 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class SMPatBattle {
-    private final int smNroSoldados = 5;
-
+    private final int SMNROSOLDADOS;
     private ArrayList <SMSoldado> smPelotonAtaque;
-    private Hashtable <Integer, String > smMisiones;
+    private ArrayList <SMSoldado> vePelotonDefensa;
+    private ArrayList <SMSoldado> vePelotonSabotaje;
+    private ArrayList <SMSoldado> vePelotonInfiltracion;
+    private ArrayList <SMSoldado> vePelotonRescate;
+    private Hashtable <Integer,String> smMisiones;
     private SMExpertoEspanol smExpertoEspanol;
     private SMExpertoIngles smExpertoIngles;
     private VEMecatronico smMecatronico;
     private VEIabot smIabot;
     private VEExobot smExobot;
     private SMSoldado smSoldado;
+    private SMColor smColor;
 
-    // Constructor
     public SMPatBattle() {
+        SMNROSOLDADOS = 5;
         this.smPelotonAtaque = new ArrayList<>();
+        this.vePelotonDefensa = new ArrayList<>();
+        this.vePelotonSabotaje = new ArrayList<>();
+        this.vePelotonInfiltracion = new ArrayList<>();
+        this.vePelotonRescate = new ArrayList<>();
         this.smMisiones = new Hashtable<>();
         smMisiones.put(1234,"atacar");
         smMisiones.put(5678,"defender");
-        smMisiones.put(9101,"sabotaje");
-        smMisiones.put(1213,"infiltracion");
-        smMisiones.put(1415,"rescate");
+        smMisiones.put(9101,"sabotear");
+        smMisiones.put(1213,"infiltrarse");
+        smMisiones.put(1415,"rescatar");
         smIabot = new VEIabot(smMisiones);
         smMecatronico = new VEMecatronico();
         smExpertoEspanol = new SMExpertoEspanol();
         smExpertoIngles = new SMExpertoIngles();
+
+        smColor = new SMColor();
     }
 
-    public void smCrearPeloton(){
-        for (int smCantidadSoldados = 0; smCantidadSoldados < smNroSoldados; smCantidadSoldados++) {
-            smSoldado = new SMSoldado("fuerte","atacar","agilidad");
-            smIabot.smSetSmCodigoSeguridad(1234);
-            smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
-            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
-            smExobot = smMecatronico.armarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
-            smSoldado.smSetSmExobot(smExobot);
-
-            smPelotonAtaque.add(smSoldado);
-        }
-    }
-    
     public void smMostrarPeloton(){
+        System.out.println(smColor.SMWHITE +"\nPELOTONES RUSOS" + smColor.SMBLUE + " LISTOS PARA" + smColor.SMRED + " LA BATALLA" + smColor.SMRESET);
         int smNroSoldado = 1;
-        smCrearPeloton();
-        System.out.println("PELOTON DE ATAQUE:");
+        smCrearPelotonAtaque();
+        System.out.println(smColor.SMRED +"\nPELOTON DE ATAQUE:" + smColor.SMRESET);
         System.out.println("------------------------------------------------");
         for (SMSoldado smSoldadoAtaque : smPelotonAtaque) {
-            System.out.println("SOLDADO " + smNroSoldado);
+            System.out.println(smColor.SMRED + "SOLDADO " + smNroSoldado + smColor.SMRESET);
             smNroSoldado++;
-
             smExpertoEspanol.smEnsenarEspanol(smSoldadoAtaque.smGetSmExobot());
             smExpertoIngles.smEnsenarIngles(smSoldadoAtaque.smGetSmExobot());
-
             smSoldadoAtaque.smGetSmExobot().veRealizarMision(smSoldadoAtaque.smGetSmExobot().veGetVeCodigoSeguridad(), smMisiones);
             smSoldadoAtaque.smGetSmExobot().vePotencializarFuerza(smSoldadoAtaque.veGetVeFuerza());
             smSoldadoAtaque.smGetSmExobot().vePotencializarHabilidad(smSoldadoAtaque.veGetVeHabilidad());
             smSoldadoAtaque.smGetSmExobot().vePotencializarMovimiento(smSoldadoAtaque.veGetVeMovimientoFisico());     
-    
             smSoldadoAtaque.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
             smSoldadoAtaque.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
-    
-    
             smSoldadoAtaque.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-
             smSoldadoAtaque.smGetSmExobot().smGetSmBrazoDerecho().smGetSmLaser().ftDisparar();
             smSoldadoAtaque.smGetSmExobot().smGetSmBrazoIzquierdo().smGetSmBazuca().smObtenerEnergia(smSoldadoAtaque.smGetSmExobot().smGetSmFuentePoder());
-            
             smSoldadoAtaque.smRecargarFuentePoder(smIabot);
             smSoldadoAtaque.smReemplazarFuentePoder(smIabot);
             System.out.println("------------------------------------------------");  
         }
 
+        smNroSoldado = 1;
+        veCrearPelotonDefensa();
+        System.out.println(smColor.SMYELLOW + "PELOTON DE DEFENSA:" + smColor.SMRESET);
+        System.out.println("------------------------------------------------");
+        for (SMSoldado VESoldadoDefensa : vePelotonDefensa) {
+            System.out.println(smColor.SMYELLOW + "SOLDADO " + smNroSoldado + smColor.SMRESET);
+            smNroSoldado++;
+            smExpertoEspanol.smEnsenarEspanol(VESoldadoDefensa.smGetSmExobot());
+            smExpertoIngles.smEnsenarIngles(VESoldadoDefensa.smGetSmExobot());
+            VESoldadoDefensa.smGetSmExobot().veRealizarMision(VESoldadoDefensa.smGetSmExobot().veGetVeCodigoSeguridad(), smMisiones);
+            VESoldadoDefensa.smGetSmExobot().vePotencializarFuerza(VESoldadoDefensa.veGetVeFuerza());
+            VESoldadoDefensa.smGetSmExobot().vePotencializarHabilidad(VESoldadoDefensa.veGetVeHabilidad());
+            VESoldadoDefensa.smGetSmExobot().vePotencializarMovimiento(VESoldadoDefensa.veGetVeMovimientoFisico());     
+            VESoldadoDefensa.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
+            VESoldadoDefensa.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
+            VESoldadoDefensa.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
+            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoDerecho().smGetSmLanzaFuego().ftDisparar();
+            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoIzquierdo().smGetSmMk61().smObtenerEnergia(VESoldadoDefensa.smGetSmExobot().smGetSmFuentePoder());
+            VESoldadoDefensa.smRecargarFuentePoder(smIabot);
+            VESoldadoDefensa.smReemplazarFuentePoder(smIabot);
+            System.out.println("------------------------------------------------");  
+        }
+
+        smNroSoldado = 1;
+        veCrearPelotonSabotaje();
+        System.out.println(smColor.SMGREEN + "PELOTON DE SABOTAJE:" + smColor.SMRESET);
+        System.out.println("------------------------------------------------");
+        for (SMSoldado VESoldadoSabotaje : vePelotonSabotaje) {
+            System.out.println(smColor.SMGREEN + "SOLDADO " + smNroSoldado + smColor.SMRESET);
+            smNroSoldado++;
+            smExpertoEspanol.smEnsenarEspanol(VESoldadoSabotaje.smGetSmExobot());
+            smExpertoIngles.smEnsenarIngles(VESoldadoSabotaje.smGetSmExobot());
+            VESoldadoSabotaje.smGetSmExobot().veRealizarMision(VESoldadoSabotaje.smGetSmExobot().veGetVeCodigoSeguridad(), smMisiones);
+            VESoldadoSabotaje.smGetSmExobot().vePotencializarFuerza(VESoldadoSabotaje.veGetVeFuerza());
+            VESoldadoSabotaje.smGetSmExobot().vePotencializarHabilidad(VESoldadoSabotaje.veGetVeHabilidad());
+            VESoldadoSabotaje.smGetSmExobot().vePotencializarMovimiento(VESoldadoSabotaje.veGetVeMovimientoFisico());     
+            VESoldadoSabotaje.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
+            VESoldadoSabotaje.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
+            VESoldadoSabotaje.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
+            VESoldadoSabotaje.smRecargarFuentePoder(smIabot);
+            VESoldadoSabotaje.smReemplazarFuentePoder(smIabot);
+            System.out.println("------------------------------------------------");  
+        }
+
+        smNroSoldado = 1;
+        veCrearPelotonInfiltracion();
+        System.out.println(smColor.SMBLUE + "PELOTON DE INFILTRACION:" + smColor.SMRESET);
+        System.out.println("------------------------------------------------");
+        for (SMSoldado VESoldadoInfiltracion : vePelotonInfiltracion) {
+            System.out.println(smColor.SMBLUE + "SOLDADO " + smNroSoldado + smColor.SMRESET);
+            smNroSoldado++;
+            smExpertoEspanol.smEnsenarEspanol(VESoldadoInfiltracion.smGetSmExobot());
+            smExpertoIngles.smEnsenarIngles(VESoldadoInfiltracion.smGetSmExobot());
+            VESoldadoInfiltracion.smGetSmExobot().veRealizarMision(VESoldadoInfiltracion.smGetSmExobot().veGetVeCodigoSeguridad(), smMisiones);
+            VESoldadoInfiltracion.smGetSmExobot().vePotencializarFuerza(VESoldadoInfiltracion.veGetVeFuerza());
+            VESoldadoInfiltracion.smGetSmExobot().vePotencializarHabilidad(VESoldadoInfiltracion.veGetVeHabilidad());
+            VESoldadoInfiltracion.smGetSmExobot().vePotencializarMovimiento(VESoldadoInfiltracion.veGetVeMovimientoFisico());     
+            VESoldadoInfiltracion.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
+            VESoldadoInfiltracion.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
+            VESoldadoInfiltracion.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
+            VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoDerecho().smGetSmLaser().ftDisparar();
+            VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoIzquierdo();
+            VESoldadoInfiltracion.smRecargarFuentePoder(smIabot);
+            VESoldadoInfiltracion.smReemplazarFuentePoder(smIabot);
+            System.out.println("------------------------------------------------");  
+        }
+
+        smNroSoldado = 1;
+        veCrearPelotonRescate();
+        System.out.println(smColor.SMCYAN + "PELOTON DE RESCATE:" + smColor.SMRESET);
+        System.out.println("------------------------------------------------");
+        for (SMSoldado VESoldadoRescate : vePelotonRescate) {
+            System.out.println(smColor.SMCYAN + "SOLDADO " + smNroSoldado + smColor.SMRESET);
+            smNroSoldado++;
+            smExpertoEspanol.smEnsenarEspanol(VESoldadoRescate.smGetSmExobot());
+            smExpertoIngles.smEnsenarIngles(VESoldadoRescate.smGetSmExobot());
+            VESoldadoRescate.smGetSmExobot().veRealizarMision(VESoldadoRescate.smGetSmExobot().veGetVeCodigoSeguridad(), smMisiones);
+            VESoldadoRescate.smGetSmExobot().vePotencializarFuerza(VESoldadoRescate.veGetVeFuerza());
+            VESoldadoRescate.smGetSmExobot().vePotencializarHabilidad(VESoldadoRescate.veGetVeHabilidad());
+            VESoldadoRescate.smGetSmExobot().vePotencializarMovimiento(VESoldadoRescate.veGetVeMovimientoFisico());     
+            VESoldadoRescate.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
+            VESoldadoRescate.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
+            VESoldadoRescate.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
+            VESoldadoRescate.smGetSmExobot().smGetSmBrazoDerecho().smGetSmLanzaFuego().ftDisparar();
+            VESoldadoRescate.smGetSmExobot().smGetSmBrazoIzquierdo().smGetSmMk61().smObtenerEnergia(VESoldadoRescate.smGetSmExobot().smGetSmFuentePoder());
+            VESoldadoRescate.smRecargarFuentePoder(smIabot);
+            VESoldadoRescate.smReemplazarFuentePoder(smIabot);
+            System.out.println("------------------------------------------------");  
+        }
     }
 
+    public void smCrearPelotonAtaque(){
+        for (int smCantidadSoldados = 0; smCantidadSoldados < SMNROSOLDADOS; smCantidadSoldados++) {
+            smSoldado = new SMSoldado("fuerte","atacar","agilidad");
+            smIabot.smSetSmCodigoSeguridad(1234);
+            smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
+            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
+            smSoldado.smSetSmExobot(smExobot);
+            smPelotonAtaque.add(smSoldado);
+        }
+    }
 
-    public void smPresentarPeloton(){
-        smExpertoEspanol = new SMExpertoEspanol();
-        smExpertoIngles = new SMExpertoIngles();
-        Hashtable <Integer, String > smMisiones = new Hashtable<>();
+    public void veCrearPelotonDefensa(){
+        for (int smCantidadSoldados = 0; smCantidadSoldados < SMNROSOLDADOS; smCantidadSoldados++) {
+            smSoldado = new SMSoldado("fuerte","defender","agilidad");
+            smIabot.smSetSmCodigoSeguridad(5678);
+            smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
+            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
+            smSoldado.smSetSmExobot(smExobot);
+            vePelotonDefensa.add(smSoldado);
+        }
+    }
 
-        smMisiones.put(1234,"atacar");
-        smMisiones.put(5678,"defender");
-        smMisiones.put(9101,"sabotaje");
-        smMisiones.put(1213,"infiltracion");
-        smMisiones.put(1415,"rescate");
+    public void veCrearPelotonSabotaje(){
+        for (int smCantidadSoldados = 0; smCantidadSoldados < SMNROSOLDADOS; smCantidadSoldados++) {
+            smSoldado = new SMSoldado("fuerte","sabotaje","agilidad");
+            smIabot.smSetSmCodigoSeguridad(9101);
+            smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
+            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
+            smSoldado.smSetSmExobot(smExobot);
+            vePelotonSabotaje.add(smSoldado);
+        }
+    }
 
-        // ArrayList <String> smHabilidadesSoldados = new ArrayList<>();
-        // smHabilidadesSoldados.add("defender");
-        // smHabilidadesSoldados.add("atacar");
-        // smHabilidadesSoldados.add("sabotaje");
-        // smHabilidadesSoldados.add("infiltracion");
-        // smHabilidadesSoldados.add("rescate");
+    public void veCrearPelotonInfiltracion(){
+        for (int smCantidadSoldados = 0; smCantidadSoldados < SMNROSOLDADOS; smCantidadSoldados++) {
+            smSoldado = new SMSoldado("fuerte","infiltracion","agilidad");
+            smIabot.smSetSmCodigoSeguridad(1213);
+            smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
+            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
+            smSoldado.smSetSmExobot(smExobot);
+            vePelotonInfiltracion.add(smSoldado);
+        }
+    }
 
-        smSoldado = new SMSoldado("fuerte","atacar","agilidad");
-        smIabot = new VEIabot(smMisiones);
-        smMecatronico = new VEMecatronico();
-
-
-        smIabot.smSetSmCodigoSeguridad(1234);
-        smIabot.smSetSmSerieUnica(3456);
-        smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
-
-        smExobot = smMecatronico.armarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
-        
-        smExpertoEspanol.smEnsenarEspanol(smExobot);
-
-        smSoldado.smSetSmExobot(smExobot);
-
-        smSoldado.smGetSmExobot().veRealizarMision(smSoldado.smGetSmExobot().veGetVeCodigoSeguridad(), smMisiones);
-        smSoldado.smGetSmExobot().vePotencializarFuerza(smSoldado.veGetVeFuerza());
-        smSoldado.smGetSmExobot().vePotencializarHabilidad(smSoldado.veGetVeHabilidad());
-        smSoldado.smGetSmExobot().vePotencializarMovimiento(smSoldado.veGetVeMovimientoFisico());     
-
-        smSoldado.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(2);
-        smSoldado.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(20);
-
-
-        smSoldado.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-        
-        smSoldado.smRecargarFuentePoder(smIabot);
-        smSoldado.smReemplazarFuentePoder(smIabot);
-
+    public void veCrearPelotonRescate(){
+        for (int smCantidadSoldados = 0; smCantidadSoldados < SMNROSOLDADOS; smCantidadSoldados++) {
+            smSoldado = new SMSoldado("fuerte","rescate","agilidad");
+            smIabot.smSetSmCodigoSeguridad(1415);
+            smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
+            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
+            smSoldado.smSetSmExobot(smExobot);
+            vePelotonRescate.add(smSoldado);
+        }
     }
 }
