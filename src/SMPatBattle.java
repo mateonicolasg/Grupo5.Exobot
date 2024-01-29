@@ -33,8 +33,8 @@ public class SMPatBattle {
             smSoldado = new SMSoldado("fuerte","atacar","agilidad");
             smIabot.smSetSmCodigoSeguridad(1234);
             smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
-            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
-            smExobot = smMecatronico.armarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
+            smIabot.asSetAsFuentePoder(new ASFuentePoder("alto"));
+            smExobot = smMecatronico.armarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.asGetAsFuentePoder());
             smSoldado.smSetSmExobot(smExobot);
 
             smPelotonAtaque.add(smSoldado);
@@ -58,14 +58,14 @@ public class SMPatBattle {
             smSoldadoAtaque.smGetSmExobot().vePotencializarHabilidad(smSoldadoAtaque.veGetVeHabilidad());
             smSoldadoAtaque.smGetSmExobot().vePotencializarMovimiento(smSoldadoAtaque.veGetVeMovimientoFisico());     
     
-            smSoldadoAtaque.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
-            smSoldadoAtaque.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
+            smSoldadoAtaque.smGetSmExobot().asGetAsExtremidadInferior().ftSaltar(50);
+            smSoldadoAtaque.smGetSmExobot().asGetAsExtremidadInferior().ftCorrer(200);
     
     
-            smSoldadoAtaque.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
+            smSoldadoAtaque.smGetSmExobot().asGetAsTurboReactor().ftVolar(smExobot.asGetAsFuentePoder());
 
             smSoldadoAtaque.smGetSmExobot().smGetSmBrazoDerecho().smGetSmLaser().ftDisparar();
-            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoIzquierdo().smGetSmBazuca().smObtenerEnergia(smSoldadoAtaque.smGetSmExobot().smGetSmFuentePoder());
+            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoIzquierdo().smGetSmBazuca().smObtenerEnergia(smSoldadoAtaque.smGetSmExobot().asGetAsFuentePoder());
             
             smSoldadoAtaque.smRecargarFuentePoder(smIabot);
             smSoldadoAtaque.smReemplazarFuentePoder(smIabot);
@@ -100,9 +100,9 @@ public class SMPatBattle {
 
         smIabot.smSetSmCodigoSeguridad(1234);
         smIabot.smSetSmSerieUnica(3456);
-        smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+        smIabot.asSetAsFuentePoder(new ASFuentePoder("alto"));
 
-        smExobot = smMecatronico.armarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
+        smExobot = smMecatronico.armarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.asGetAsFuentePoder());
         
         smExpertoEspanol.smEnsenarEspanol(smExobot);
 
@@ -113,11 +113,11 @@ public class SMPatBattle {
         smSoldado.smGetSmExobot().vePotencializarHabilidad(smSoldado.veGetVeHabilidad());
         smSoldado.smGetSmExobot().vePotencializarMovimiento(smSoldado.veGetVeMovimientoFisico());     
 
-        smSoldado.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(2);
-        smSoldado.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(20);
+        smSoldado.smGetSmExobot().asGetAsExtremidadInferior().ftSaltar(2);
+        smSoldado.smGetSmExobot().asGetAsExtremidadInferior().ftCorrer(20);
 
 
-        smSoldado.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
+        smSoldado.smGetSmExobot().asGetAsTurboReactor().ftVolar(smExobot.asGetAsFuentePoder());
         
         smSoldado.smRecargarFuentePoder(smIabot);
         smSoldado.smReemplazarFuentePoder(smIabot);

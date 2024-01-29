@@ -21,9 +21,9 @@ public class VEMecatronico {
 
     // Metodos
 
-    public VEExobot armarExobot(int smCodigo, int smSerieUnica, String smHabilidad, SMFuentePoder smFuentePoder){
-        SMExtremidadInferior smExtremidadInferior = new SMExtremidadInferior();
-        SMTurboReactor smTurboReactor = new SMTurboReactor();
+    public VEExobot armarExobot(int smCodigo, int smSerieUnica, String smHabilidad, ASFuentePoder asFuentePoder){
+        ASExtremidadInferior asExtremidadInferior = new ASExtremidadInferior();
+        ASTurboReactor asTurboReactor = new ASTurboReactor();
         // SMFuentePoder smFuentePoder = new SMFuentePoder("alto");
         SMBrazoDerecho smBrazoDerecho = new SMBrazoDerecho();
         SMBrazoIzquierdo smBrazoIzquierdo = new SMBrazoIzquierdo();
@@ -47,7 +47,7 @@ public class VEMecatronico {
             smBrazoDerecho = new SMBrazoDerecho(new SMLanzaFuego());
             smBrazoIzquierdo = new SMBrazoIzquierdo(new SMMK61());
         }  
-        VEExobot smExobot = new VEExobot(smCodigo, smSerieUnica, smExtremidadInferior, smTurboReactor, smFuentePoder, smBrazoDerecho, smBrazoIzquierdo);
+        VEExobot smExobot = new VEExobot(smCodigo, smSerieUnica, asExtremidadInferior, asTurboReactor, asFuentePoder, smBrazoDerecho, smBrazoIzquierdo);
         return smExobot;
     }
 

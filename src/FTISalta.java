@@ -1,5 +1,5 @@
 public interface FTISalta {
 
-    public void ftSaltar(int smSaltoRequerido);
+    public void ftSaltar(int asSaltoRequerido);
 
 }

@@ -1,4 +1,4 @@
 public interface FTICorre {
 
-    public void ftCorrer(int smVelocidadRequerida);
+    public void ftCorrer(int asVelocidadRequerida);
 }
