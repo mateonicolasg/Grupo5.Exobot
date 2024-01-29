@@ -1,6 +1,6 @@
 public class SMBrazoDerecho {
-    private SMLaser smLaser;
-    private SMLanzaFuego smLanzaFuego;
+    private ESLaser esLaser;
+    private ESLanzaFuego esLanzaFuego;
 
     public SMBrazoDerecho() {
     }
@@ -13,19 +13,34 @@ public class SMBrazoDerecho {
         this.smLanzaFuego = smLanzaFuego;
     }
     
-    public SMLaser smGetSmLaser() {
-        return smLaser;
+    public ESLaser smGetEsLaser() {
+        return esLaser;
     }
 
-    public void smSetSmLaser(SMLaser smLaser) {
-        this.smLaser = smLaser;
+    public void smSetEsLaser(ESLaser esLaser) {
+        this.esLaser = esLaser;
     }
 
-    public SMLanzaFuego smGetSmLanzaFuego() {
-        return smLanzaFuego;
+    public ESLanzaFuego smGetEsLanzaFuego() {
+        return esLanzaFuego;
     }
 
-    public void smSetSmLanzaFuego(SMLanzaFuego smLanzaFuego) {
-        this.smLanzaFuego = smLanzaFuego;
+    public void smSetEsLanzaFuego(ESLanzaFuego esLanzaFuego) {
+        this.esLanzaFuego = esLanzaFuego;
+    }
+<<<<<<< HEAD
+}
+=======
+
+    public SMBrazoDerecho() {
+    }
+
+    public SMBrazoDerecho(ESLaser esLaser) {
+        this.esLaser = esLaser;
+    }
+    
+    public SMBrazoDerecho(ESLanzaFuego esLanzaFuego) {
+        this.esLanzaFuego = esLanzaFuego;
     }
 }
+>>>>>>> d04d8ef8107fc54ef3a312c0d4af627e7e3fd85a

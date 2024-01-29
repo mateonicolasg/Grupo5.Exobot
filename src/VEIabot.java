@@ -47,6 +47,14 @@ public class VEIabot {
         this.smMisiones = smMisiones;
     }
     // metodos                  
+<<<<<<< HEAD
+=======
+    
+    public ArrayList <ESIArma> smAsignarArmas(ArrayList <ESIArma> smArmas){
+        return smArmas;
+    }
+
+>>>>>>> d04d8ef8107fc54ef3a312c0d4af627e7e3fd85a
     public int smGenerarCodigoAleatorio() {
         Random smRandom = new Random();
         int smNumero = 0;
