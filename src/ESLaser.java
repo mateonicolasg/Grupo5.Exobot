@@ -6,7 +6,7 @@ public class ESLaser implements FTIDispara, ESIArma {
     }
 
     @Override
-    public void smObtenerEnergia(ASFuentePoder asFuentePoder) {
+    public void esObtenerEnergia(ASFuentePoder asFuentePoder) {
         System.out.println("Laser obteniendo energia y con potencia " + asFuentePoder.asGetAsNivelEnergia());
     }
     
