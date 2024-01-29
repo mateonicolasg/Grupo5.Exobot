@@ -6,7 +6,7 @@ public class ESLanzaFuego implements FTIDispara, ESIArma {
     }
 
     @Override
-    public void smObtenerEnergia(ASFuentePoder smFuentePoder) {
+    public void esObtenerEnergia(ASFuentePoder smFuentePoder) {
         System.out.println("Lanza fuego obteniendo energia y con potencia " + smFuentePoder.asGetAsNivelEnergia());
     }
 
