@@ -1,3 +1,3 @@
-public interface SMIArma {
+public interface ESIArma {
     public void smObtenerEnergia(ASFuentePoder asFuentePoder);
 }
