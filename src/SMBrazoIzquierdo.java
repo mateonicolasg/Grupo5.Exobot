@@ -13,19 +13,19 @@ public class SMBrazoIzquierdo {
     public SMBrazoIzquierdo(){}
 
     // Getter y setter
-    public ESBazuca esGetEsBazuca() {
+    public ESBazuca smGetEsBazuca() {
         return esBazuca;
     }
 
-    public void esSetEsBazuca(ESBazuca esBazuca) {
+    public void smSetEsBazuca(ESBazuca esBazuca) {
         this.esBazuca = esBazuca;
     }
 
-    public ESMK61 esGetEsMk61() {
+    public ESMK61 smGetEsMk61() {
         return esMk61;
     }
 
-    public void esSetEsMk61(ESMK61 esMk61) {
+    public void smSetEsMk61(ESMK61 esMk61) {
         this.esMk61 = esMk61;
     }
 
