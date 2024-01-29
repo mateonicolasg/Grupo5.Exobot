@@ -2,7 +2,6 @@ import java.util.Hashtable;
 
 public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     private int veCodigoSeguridad; 
-
     private int smSerieUnica;
     private SMExtremidadInferior smExtremidadInferior;
     private SMTurboReactor smTurboReactor;
@@ -10,7 +9,25 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     private SMBrazoDerecho smBrazoDerecho;
     private SMBrazoIzquierdo smBrazoIzquierdo;
 
-    // Getter y setter
+    public VEExobot(int veCodigoSeguridad, int smSerieUnica, SMExtremidadInferior smExtremidadInferior,
+        SMTurboReactor smTurboReactor, SMFuentePoder smFuentePoder, SMBrazoDerecho smBrazoDerecho,
+        SMBrazoIzquierdo smBrazoIzquierdo) {
+        this.veCodigoSeguridad = veCodigoSeguridad;
+        this.smSerieUnica = smSerieUnica;
+        this.smExtremidadInferior = smExtremidadInferior;
+        this.smTurboReactor = smTurboReactor;
+        this.smFuentePoder = smFuentePoder;
+        this.smBrazoDerecho = smBrazoDerecho;
+        this.smBrazoIzquierdo = smBrazoIzquierdo;
+    }
+
+    public int smGetSmSerieUnica() {
+        return smSerieUnica;
+    }
+
+    public void smSetSmSerieUnica(int smSerieUnica) {
+        this.smSerieUnica = smSerieUnica;
+    }
 
     public SMExtremidadInferior smGetSmExtremidadInferior() {
         return smExtremidadInferior;
@@ -59,22 +76,7 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     public void veSetVeCodigoSeguridad(int veCodigoSeguridad) {
         this.veCodigoSeguridad = veCodigoSeguridad;
     }
-    
-    // constructor    
-    
-    public VEExobot(int veCodigoSeguridad, int smSerieUnica, SMExtremidadInferior smExtremidadInferior,
-        SMTurboReactor smTurboReactor, SMFuentePoder smFuentePoder, SMBrazoDerecho smBrazoDerecho,
-        SMBrazoIzquierdo smBrazoIzquierdo) {
-        this.veCodigoSeguridad = veCodigoSeguridad;
-        this.smSerieUnica = smSerieUnica;
-        this.smExtremidadInferior = smExtremidadInferior;
-        this.smTurboReactor = smTurboReactor;
-        this.smFuentePoder = smFuentePoder;
-        this.smBrazoDerecho = smBrazoDerecho;
-        this.smBrazoIzquierdo = smBrazoIzquierdo;
-    }
 
-    // metodos
     public void vePotencializarFuerza(String veFuerza){
         System.out.println("potencializando fuerza del soldado");
     }
@@ -103,7 +105,4 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     public String ftAprenderIngles() {
         return "Aprendiendo el lexico, gramatica y fonetica del ingles";
     } 
-
-
-
 }

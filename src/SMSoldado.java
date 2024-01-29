@@ -2,10 +2,14 @@ public class SMSoldado {
     private String veFuerza; 
     private String veHabilidad; 
     private String veMovimientoFisico;
-
     private VEExobot smExobot; 
 
-    // Getter y Setter
+    public SMSoldado(String veFuerza, String veHabilidad, String veMovimientoFisico) {
+        this.veFuerza = veFuerza;
+        this.veHabilidad = veHabilidad;
+        this.veMovimientoFisico = veMovimientoFisico;
+    }
+
     public String veGetVeFuerza() {
         return veFuerza;
     }
@@ -38,14 +42,6 @@ public class SMSoldado {
         this.smExobot = smExobot;
     }
     
-    // constructor
-    public SMSoldado(String veFuerza, String veHabilidad, String veMovimientoFisico) {
-        this.veFuerza = veFuerza;
-        this.veHabilidad = veHabilidad;
-        this.veMovimientoFisico = veMovimientoFisico;
-    }
-    
-    // metodos
     public void smRecargarFuentePoder(VEIabot veIabot){
         System.out.println("recargando fuente de poder agotada de exobot");
     }
@@ -57,6 +53,4 @@ public class SMSoldado {
     public void veSacrificarExtremidad(){
         System.out.println("sacrificar extremidades inferiores ");
     }
-     
-
 }
