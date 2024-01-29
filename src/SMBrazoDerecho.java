@@ -1,33 +1,33 @@
 public class SMBrazoDerecho {
-    private SMLaser smLaser;
-    private SMLanzaFuego smLanzaFuego;
+    private ESLaser esLaser;
+    private ESLanzaFuego esLanzaFuego;
 
     // Getter y setter
     
-    public SMLaser smGetSmLaser() {
-        return smLaser;
+    public ESLaser esGetEsLaser() {
+        return esLaser;
     }
 
-    public void smSetSmLaser(SMLaser smLaser) {
-        this.smLaser = smLaser;
+    public void esSetEsLaser(ESLaser esLaser) {
+        this.esLaser = esLaser;
     }
 
-    public SMLanzaFuego smGetSmLanzaFuego() {
-        return smLanzaFuego;
+    public ESLanzaFuego esGetEsLanzaFuego() {
+        return esLanzaFuego;
     }
 
-    public void smSetSmLanzaFuego(SMLanzaFuego smLanzaFuego) {
-        this.smLanzaFuego = smLanzaFuego;
+    public void esSetEsLanzaFuego(ESLanzaFuego esLanzaFuego) {
+        this.esLanzaFuego = esLanzaFuego;
     }
 
     public SMBrazoDerecho() {
     }
 
-    public SMBrazoDerecho(SMLaser smLaser) {
-        this.smLaser = smLaser;
+    public SMBrazoDerecho(ESLaser esLaser) {
+        this.esLaser = esLaser;
     }
     
-    public SMBrazoDerecho(SMLanzaFuego smLanzaFuego) {
-        this.smLanzaFuego = smLanzaFuego;
+    public SMBrazoDerecho(ESLanzaFuego esLanzaFuego) {
+        this.esLanzaFuego = esLanzaFuego;
     }
 }
