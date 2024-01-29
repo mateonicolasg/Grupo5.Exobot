@@ -1,4 +1,4 @@
-public class SMMK61 implements FTIDispara, SMIArma {
+public class VMMK61 implements FTIDispara, SMIArma {
 
     @Override
     public void ftDisparar() {

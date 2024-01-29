@@ -1,4 +1,4 @@
-public class SMBazuca implements FTIDispara, SMIArma {
+public class VMBazuca implements FTIDispara, SMIArma {
 
     @Override
     public void ftDisparar() {

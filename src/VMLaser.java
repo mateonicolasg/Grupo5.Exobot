@@ -1,4 +1,4 @@
-public class SMLaser implements FTIDispara, SMIArma {
+public class VMLaser implements FTIDispara, SMIArma {
 
     @Override
     public void ftDisparar() {

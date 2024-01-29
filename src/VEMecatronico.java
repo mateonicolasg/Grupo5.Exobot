@@ -25,29 +25,29 @@ public class VEMecatronico {
         ASExtremidadInferior asExtremidadInferior = new ASExtremidadInferior();
         ASTurboReactor asTurboReactor = new ASTurboReactor();
         // SMFuentePoder smFuentePoder = new SMFuentePoder("alto");
-        SMBrazoDerecho smBrazoDerecho = new SMBrazoDerecho();
-        SMBrazoIzquierdo smBrazoIzquierdo = new SMBrazoIzquierdo();
+        VMBrazoDerecho vmBrazoDerecho = new VMBrazoDerecho();
+        VMBrazoIzquierdo vmBrazoIzquierdo = new VMBrazoIzquierdo();
         if (smHabilidad.equals("defender")){
-            smBrazoDerecho = new SMBrazoDerecho(new SMLanzaFuego());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMMK61());
+            vmBrazoDerecho = new VMBrazoDerecho(new VMLanzaFuego());
+            vmBrazoIzquierdo = new VMBrazoIzquierdo(new VMMK61());
         }
         else if (smHabilidad.equals("atacar")){
-            smBrazoDerecho = new SMBrazoDerecho(new SMLaser());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMBazuca());
+            vmBrazoDerecho = new VMBrazoDerecho(new VMLaser());
+            vmBrazoIzquierdo = new VMBrazoIzquierdo(new VMBazuca());
         }
         else if (smHabilidad.equals("sabotaje")){
-            smBrazoDerecho = new SMBrazoDerecho(new SMLaser());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMMK61());
+            vmBrazoDerecho = new VMBrazoDerecho(new VMLaser());
+            vmBrazoIzquierdo = new VMBrazoIzquierdo(new VMMK61());
         }
         else if (smHabilidad.equals("infiltracion")){
-            smBrazoDerecho = new SMBrazoDerecho(new SMLaser());
-            smBrazoIzquierdo = new SMBrazoIzquierdo();
+            vmBrazoDerecho = new VMBrazoDerecho(new VMLaser());
+            vmBrazoIzquierdo = new VMBrazoIzquierdo();
         }
         else if (smHabilidad.equals("rescate")){
-            smBrazoDerecho = new SMBrazoDerecho(new SMLanzaFuego());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMMK61());
+            vmBrazoDerecho = new VMBrazoDerecho(new VMLanzaFuego());
+            vmBrazoIzquierdo = new VMBrazoIzquierdo(new VMMK61());
         }  
-        VEExobot smExobot = new VEExobot(smCodigo, smSerieUnica, asExtremidadInferior, asTurboReactor, asFuentePoder, smBrazoDerecho, smBrazoIzquierdo);
+        VEExobot smExobot =  new VEExobot(smCodigo, smSerieUnica, asExtremidadInferior, asTurboReactor, asFuentePoder, vmBrazoDerecho, vmBrazoIzquierdo);
         return smExobot;
     }
 

@@ -7,8 +7,8 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     private ASExtremidadInferior asExtremidadInferior;
     private ASTurboReactor asTurboReactor;
     private ASFuentePoder asFuentePoder;
-    private SMBrazoDerecho smBrazoDerecho;
-    private SMBrazoIzquierdo smBrazoIzquierdo;
+    private VMBrazoDerecho vmBrazoDerecho;
+    private VMBrazoIzquierdo vmBrazoIzquierdo;
 
     // Getter y setter
 
@@ -36,20 +36,20 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
         this.asFuentePoder = asFuentePoder;
     }
 
-    public SMBrazoDerecho smGetSmBrazoDerecho() {
-        return smBrazoDerecho;
+    public VMBrazoDerecho vmGetVmBrazoDerecho() {
+        return vmBrazoDerecho;
     }
 
-    public void smSetSmBrazoDerecho(SMBrazoDerecho smBrazoDerecho) {
-        this.smBrazoDerecho = smBrazoDerecho;
+    public void vmSetVmBrazoDerecho(VMBrazoDerecho vmBrazoDerecho) {
+        this.vmBrazoDerecho = vmBrazoDerecho;
     }
 
-    public SMBrazoIzquierdo smGetSmBrazoIzquierdo() {
-        return smBrazoIzquierdo;
+    public VMBrazoIzquierdo vmGetVmBrazoIzquierdo() {
+        return vmBrazoIzquierdo;
     }
 
-    public void smSetSmBrazoIzquierdo(SMBrazoIzquierdo smBrazoIzquierdo) {
-        this.smBrazoIzquierdo = smBrazoIzquierdo;
+    public void vmSetVMBrazoIzquierdo(VMBrazoIzquierdo vmBrazoIzquierdo) {
+        this.vmBrazoIzquierdo = vmBrazoIzquierdo;
     }
 
     public int veGetVeCodigoSeguridad() {
@@ -63,15 +63,15 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     // constructor    
     
     public VEExobot(int veCodigoSeguridad, int smSerieUnica, ASExtremidadInferior asExtremidadInferior,
-        ASTurboReactor asTurboReactor, ASFuentePoder asFuentePoder, SMBrazoDerecho smBrazoDerecho,
-        SMBrazoIzquierdo smBrazoIzquierdo) {
+        ASTurboReactor asTurboReactor, ASFuentePoder asFuentePoder, VMBrazoDerecho vmBrazoDerecho,
+        VMBrazoIzquierdo vmBrazoIzquierdo) {
         this.veCodigoSeguridad = veCodigoSeguridad;
         this.smSerieUnica = smSerieUnica;
         this.asExtremidadInferior = asExtremidadInferior;
         this.asTurboReactor = asTurboReactor;
         this.asFuentePoder = asFuentePoder;
-        this.smBrazoDerecho = smBrazoDerecho;
-        this.smBrazoIzquierdo = smBrazoIzquierdo;
+        this.vmBrazoDerecho = vmBrazoDerecho;
+        this.vmBrazoIzquierdo = vmBrazoIzquierdo;
     }
 
     // metodos

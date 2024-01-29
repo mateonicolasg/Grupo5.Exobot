@@ -64,8 +64,8 @@ public class SMPatBattle {
     
             smSoldadoAtaque.smGetSmExobot().asGetAsTurboReactor().ftVolar(smExobot.asGetAsFuentePoder());
 
-            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoDerecho().smGetSmLaser().ftDisparar();
-            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoIzquierdo().smGetSmBazuca().smObtenerEnergia(smSoldadoAtaque.smGetSmExobot().asGetAsFuentePoder());
+            smSoldadoAtaque.smGetSmExobot().vmGetVmBrazoDerecho().vmGetVmLaser().ftDisparar();
+            smSoldadoAtaque.smGetSmExobot().vmGetVmBrazoIzquierdo().vmGetVmBazuca().smObtenerEnergia(smSoldadoAtaque.smGetSmExobot().asGetAsFuentePoder());
             
             smSoldadoAtaque.smRecargarFuentePoder(smIabot);
             smSoldadoAtaque.smReemplazarFuentePoder(smIabot);

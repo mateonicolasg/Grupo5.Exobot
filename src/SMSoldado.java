@@ -57,6 +57,6 @@ public class SMSoldado {
     public void veSacrificarExtremidad(){
         System.out.println("sacrificar extremidades inferiores ");
     }
-     
+    
 
 }
