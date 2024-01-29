@@ -55,7 +55,7 @@ public class VEIabot {
 
     // metodos                  
     
-    public ArrayList <SMIArma> smAsignarArmas(ArrayList <SMIArma> smArmas){
+    public ArrayList <ESIArma> smAsignarArmas(ArrayList <ESIArma> smArmas){
         return smArmas;
     }
 
