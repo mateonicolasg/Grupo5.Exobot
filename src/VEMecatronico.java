@@ -19,37 +19,26 @@ public class VEMecatronico {
         SMBrazoDerecho smBrazoDerecho = new SMBrazoDerecho();
         SMBrazoIzquierdo smBrazoIzquierdo = new SMBrazoIzquierdo();
         if (smHabilidad.equals("defender")){
-            smBrazoDerecho = new SMBrazoDerecho(new ESLanzaFuego());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new ESMK61());
+            smBrazoDerecho = new SMBrazoDerecho(new SMLanzaFuego());
+            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMMK61());
         }
         else if (smHabilidad.equals("atacar")){
-            smBrazoDerecho = new SMBrazoDerecho(new ESLaser());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new ESBazuca());
+            smBrazoDerecho = new SMBrazoDerecho(new SMLaser());
+            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMBazuca());
         }
         else if (smHabilidad.equals("sabotaje")){
-            smBrazoDerecho = new SMBrazoDerecho(new ESLaser());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new ESMK61());
+            smBrazoDerecho = new SMBrazoDerecho(new SMLaser());
+            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMMK61());
         }
         else if (smHabilidad.equals("infiltracion")){
-            smBrazoDerecho = new SMBrazoDerecho(new ESLaser());
+            smBrazoDerecho = new SMBrazoDerecho(new SMLaser());
             smBrazoIzquierdo = new SMBrazoIzquierdo();
         }
         else if (smHabilidad.equals("rescate")){
-            smBrazoDerecho = new SMBrazoDerecho(new ESLanzaFuego());
-            smBrazoIzquierdo = new SMBrazoIzquierdo(new ESMK61());
+            smBrazoDerecho = new SMBrazoDerecho(new SMLanzaFuego());
+            smBrazoIzquierdo = new SMBrazoIzquierdo(new SMMK61());
         }  
         VEExobot smExobot = new VEExobot(smCodigo, smSerieUnica, smExtremidadInferior, smTurboReactor, smFuentePoder, smBrazoDerecho, smBrazoIzquierdo);
         return smExobot;
     }
-<<<<<<< HEAD
 }   
-=======
-
-
-
-    public void asignarCodigo(String codigo){
-        System.out.println("asignando" + codigo + " unico a Exobot");
-    }
-
-}
->>>>>>> d04d8ef8107fc54ef3a312c0d4af627e7e3fd85a
