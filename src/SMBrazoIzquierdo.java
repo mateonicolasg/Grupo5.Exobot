@@ -1,38 +1,38 @@
 public class SMBrazoIzquierdo {
-    private SMBazuca smBazuca;
-    private SMMK61 smMk61;
+    private ESBazuca esBazuca;
+    private ESMK61 esMk61;
 
     // Constructor 
-    public SMBrazoIzquierdo(SMMK61 smMk61) {
-        this.smMk61 = smMk61;
+    public SMBrazoIzquierdo(ESMK61 esMk61) {
+        this.esMk61 = esMk61;
     }
 
-    public SMBrazoIzquierdo(SMBazuca smBazuca) {
-        this.smBazuca = smBazuca;
+    public SMBrazoIzquierdo(ESBazuca esBazuca) {
+        this.esBazuca = esBazuca;
     }
     public SMBrazoIzquierdo(){}
 
     // Getter y setter
-    public SMBazuca smGetSmBazuca() {
-        return smBazuca;
+    public ESBazuca esGetEsBazuca() {
+        return esBazuca;
     }
 
-    public void smSetSmBazuca(SMBazuca smBazuca) {
-        this.smBazuca = smBazuca;
+    public void esSetEsBazuca(ESBazuca esBazuca) {
+        this.esBazuca = esBazuca;
     }
 
-    public SMMK61 smGetSmMk61() {
-        return smMk61;
+    public ESMK61 esGetEsMk61() {
+        return esMk61;
     }
 
-    public void smSetSmMk61(SMMK61 smMk61) {
-        this.smMk61 = smMk61;
+    public void esSetEsMk61(ESMK61 esMk61) {
+        this.esMk61 = esMk61;
     }
 
-    // public void smAdquirirArma(SMBazuca smBazuca){
+    // public void smAdquirirArma(ESBazuca esBazuca){
     //     System.out.println("obteniendo bazuca");
     // }
-    // public void smAdquirirArma(SMMK61 smMk61){
+    // public void smAdquirirArma(ESMK61 esMk61){
     //     System.out.println("obteniendo metralleta");
     // }
 }
