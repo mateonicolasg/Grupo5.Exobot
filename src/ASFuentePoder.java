@@ -12,7 +12,7 @@ public class ASFuentePoder {
         this.asNivelEnergia = asNivelEnergia;
     }
     // Metodos
-    public void asOtogarEnergiaArma(SMIArma smArma){
+    public void asOtogarEnergiaArma(ESIArma esArma){
         System.out.println("Otorgando energia al arma");
     }
     public void asOtorgarEnergiaSistema(){
