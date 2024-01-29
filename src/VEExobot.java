@@ -3,9 +3,9 @@ import java.util.Hashtable;
 public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     private int veCodigoSeguridad; 
     private int smSerieUnica;
-    private SMExtremidadInferior smExtremidadInferior;
-    private SMTurboReactor smTurboReactor;
-    private SMFuentePoder smFuentePoder;
+    private ASExtremidadInferior asExtremidadInferior;
+    private ASTurboReactor asTurboReactor;
+    private ASFuentePoder asFuentePoder;
     private SMBrazoDerecho smBrazoDerecho;
     private SMBrazoIzquierdo smBrazoIzquierdo;
 
@@ -29,28 +29,28 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
         this.smSerieUnica = smSerieUnica;
     }
 
-    public SMExtremidadInferior smGetSmExtremidadInferior() {
-        return smExtremidadInferior;
+    public ASExtremidadInferior asGetAsExtremidadInferior() {
+        return asExtremidadInferior;
     }
 
-    public void smSetSmExtremidadInferior(SMExtremidadInferior smExtremidadInferior) {
-        this.smExtremidadInferior = smExtremidadInferior;
+    public void asSetAsExtremidadInferior(ASExtremidadInferior asExtremidadInferior) {
+        this.asExtremidadInferior = asExtremidadInferior;
     }
 
-    public SMTurboReactor smGetSmTurboReactor() {
-        return smTurboReactor;
+    public ASTurboReactor asGetAsTurboReactor() {
+        return asTurboReactor;
     }
 
-    public void smSetSmTurboReactor(SMTurboReactor smTurboReactor) {
-        this.smTurboReactor = smTurboReactor;
+    public void asSetAsTurboReactor(ASTurboReactor asTurboReactor) {
+        this.asTurboReactor = asTurboReactor;
     }
 
-    public SMFuentePoder smGetSmFuentePoder() {
-        return smFuentePoder;
+    public ASFuentePoder asGetAsFuentePoder() {
+        return asFuentePoder;
     }
 
-    public void smSetSmFuentePoder(SMFuentePoder smFuentePoder) {
-        this.smFuentePoder = smFuentePoder;
+    public void asSetAsFuentePoder(ASFuentePoder asFuentePoder) {
+        this.asFuentePoder = asFuentePoder;
     }
 
     public SMBrazoDerecho smGetSmBrazoDerecho() {
@@ -76,6 +76,23 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     public void veSetVeCodigoSeguridad(int veCodigoSeguridad) {
         this.veCodigoSeguridad = veCodigoSeguridad;
     }
+<<<<<<< HEAD
+=======
+    
+    // constructor    
+    
+    public VEExobot(int veCodigoSeguridad, int smSerieUnica, ASExtremidadInferior asExtremidadInferior,
+        ASTurboReactor asTurboReactor, ASFuentePoder asFuentePoder, SMBrazoDerecho smBrazoDerecho,
+        SMBrazoIzquierdo smBrazoIzquierdo) {
+        this.veCodigoSeguridad = veCodigoSeguridad;
+        this.smSerieUnica = smSerieUnica;
+        this.asExtremidadInferior = asExtremidadInferior;
+        this.asTurboReactor = asTurboReactor;
+        this.asFuentePoder = asFuentePoder;
+        this.smBrazoDerecho = smBrazoDerecho;
+        this.smBrazoIzquierdo = smBrazoIzquierdo;
+    }
+>>>>>>> 72580bf0ff6779fd7caa7936dc4649d931eaa70e
 
     public void vePotencializarFuerza(String veFuerza){
         System.out.println("potencializando fuerza del soldado");
