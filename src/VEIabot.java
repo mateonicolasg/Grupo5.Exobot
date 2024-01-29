@@ -1,20 +1,21 @@
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Random;
 import java.util.Set;
 
 public class VEIabot {
-    // private ArrayList<String> lstCodigoAccion;
-    // private ArrayList<String> lstCodigoUnico;
 
     private Hashtable<Integer, String> smMisiones;
+    private Set<Integer> smSeriesUnicas;
     private int smCodigoSeguridad;
     private int smSerieUnica;
     private SMFuentePoder smFuentePoder;
-    private Set<Integer> smSeriesUnicas;
 
-    // Getter y setter
+    public VEIabot(Hashtable<Integer, String> smMisiones) {
+        this.smMisiones = smMisiones;
+        smSeriesUnicas = new HashSet<>();
+    }
+
     public SMFuentePoder smGetSmFuentePoder() {
         return smFuentePoder;
     }
@@ -45,20 +46,7 @@ public class VEIabot {
     public void smSetSmMisiones(Hashtable<Integer, String> smMisiones) {
         this.smMisiones = smMisiones;
     }
-
-    // Constructor
-    public VEIabot(Hashtable<Integer, String> smMisiones) {
-        this.smMisiones = smMisiones;
-        smSeriesUnicas = new HashSet<>();
-    }
-
-
     // metodos                  
-    
-    public ArrayList <SMIArma> smAsignarArmas(ArrayList <SMIArma> smArmas){
-        return smArmas;
-    }
-
     public int smGenerarCodigoAleatorio() {
         Random smRandom = new Random();
         int smNumero = 0;

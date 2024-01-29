@@ -1,17 +1,18 @@
 public class SMFuentePoder {
     private String smNivelEnergia;
-    // Getter y setter
-    public String smGetSmNivelEnergia() {
-        return smNivelEnergia;
-    }
-    public void smSetSmNivelEnergia(String smNivelEnergia) {
-        this.smNivelEnergia = smNivelEnergia;
-    }
-    //Constructor
+
     public SMFuentePoder(String smNivelEnergia) {
         this.smNivelEnergia = smNivelEnergia;
     }
-    // Metodos
+
+    public String smGetSmNivelEnergia() {
+        return smNivelEnergia;
+    }
+
+    public void smSetSmNivelEnergia(String smNivelEnergia) {
+        this.smNivelEnergia = smNivelEnergia;
+    }
+
     public void smOtogarEnergiaArma(SMIArma smArma){
         System.out.println("Otorgando energia al arma");
     }

@@ -1,10 +1,10 @@
 import java.util.ArrayList;
-
 public class VEMecatronico {
 
     private ArrayList <String> smLstHabilidades;
 
-    // Getter y setter
+    public VEMecatronico(){}
+
     public ArrayList<String> getSmlstHabilidades() {
         return smLstHabilidades;
     }
@@ -13,18 +13,9 @@ public class VEMecatronico {
         this.smLstHabilidades = smLstHabilidades;
     }
 
-    // Constructor
-    public VEMecatronico(ArrayList<String> smLstHabilidades) {
-        this.smLstHabilidades = smLstHabilidades;
-    }
-    public VEMecatronico(){}
-
-    // Metodos
-
-    public VEExobot armarExobot(int smCodigo, int smSerieUnica, String smHabilidad, SMFuentePoder smFuentePoder){
+    public VEExobot smArmarExobot(int smCodigo, int smSerieUnica, String smHabilidad, SMFuentePoder smFuentePoder){
         SMExtremidadInferior smExtremidadInferior = new SMExtremidadInferior();
         SMTurboReactor smTurboReactor = new SMTurboReactor();
-        // SMFuentePoder smFuentePoder = new SMFuentePoder("alto");
         SMBrazoDerecho smBrazoDerecho = new SMBrazoDerecho();
         SMBrazoIzquierdo smBrazoIzquierdo = new SMBrazoIzquierdo();
         if (smHabilidad.equals("defender")){
@@ -49,13 +40,5 @@ public class VEMecatronico {
         }  
         VEExobot smExobot = new VEExobot(smCodigo, smSerieUnica, smExtremidadInferior, smTurboReactor, smFuentePoder, smBrazoDerecho, smBrazoIzquierdo);
         return smExobot;
-
     }
-
-    
-
-    public void asignarCodigo(String codigo){
-        System.out.println("asignando" + codigo + " unico a Exobot");
-    }
-
 }   
