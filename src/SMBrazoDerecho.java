@@ -4,19 +4,19 @@ public class SMBrazoDerecho {
 
     // Getter y setter
     
-    public ESLaser esGetEsLaser() {
+    public ESLaser smGetEsLaser() {
         return esLaser;
     }
 
-    public void esSetEsLaser(ESLaser esLaser) {
+    public void smSetEsLaser(ESLaser esLaser) {
         this.esLaser = esLaser;
     }
 
-    public ESLanzaFuego esGetEsLanzaFuego() {
+    public ESLanzaFuego smGetEsLanzaFuego() {
         return esLanzaFuego;
     }
 
-    public void esSetEsLanzaFuego(ESLanzaFuego esLanzaFuego) {
+    public void smSetEsLanzaFuego(ESLanzaFuego esLanzaFuego) {
         this.esLanzaFuego = esLanzaFuego;
     }
 
