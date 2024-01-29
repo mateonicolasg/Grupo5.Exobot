@@ -1,4 +1,4 @@
-public class SMLanzaFuego implements FTIDispara, SMIArma {
+public class ESLanzaFuego implements FTIDispara, ESIArma {
 
     @Override
     public void ftDisparar() {
