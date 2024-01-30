@@ -3,14 +3,14 @@ import java.util.Hashtable;
 public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     private int veCodigoSeguridad; 
     private int smSerieUnica;
-    private SMExtremidadInferior smExtremidadInferior;
-    private SMTurboReactor smTurboReactor;
-    private SMFuentePoder smFuentePoder;
+    private SAExtremidadInferior smExtremidadInferior;
+    private SATurboReactor smTurboReactor;
+    private SAFuentePoder smFuentePoder;
     private SMBrazoDerecho smBrazoDerecho;
     private SMBrazoIzquierdo smBrazoIzquierdo;
 
-    public VEExobot(int veCodigoSeguridad, int smSerieUnica, SMExtremidadInferior smExtremidadInferior,
-        SMTurboReactor smTurboReactor, SMFuentePoder smFuentePoder, SMBrazoDerecho smBrazoDerecho,
+    public VEExobot(int veCodigoSeguridad, int smSerieUnica, SAExtremidadInferior smExtremidadInferior,
+        SATurboReactor smTurboReactor, SAFuentePoder smFuentePoder, SMBrazoDerecho smBrazoDerecho,
         SMBrazoIzquierdo smBrazoIzquierdo) {
         this.veCodigoSeguridad = veCodigoSeguridad;
         this.smSerieUnica = smSerieUnica;
@@ -29,27 +29,27 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
         this.smSerieUnica = smSerieUnica;
     }
 
-    public SMExtremidadInferior smGetSmExtremidadInferior() {
+    public SAExtremidadInferior smGetSmExtremidadInferior() {
         return smExtremidadInferior;
     }
 
-    public void asSetSmExtremidadInferior(SMExtremidadInferior asExtremidadInferior) {
+    public void asSetSmExtremidadInferior(SAExtremidadInferior asExtremidadInferior) {
         this.smExtremidadInferior = asExtremidadInferior;
     }
 
-    public SMTurboReactor smGetSmTurboReactor() {
+    public SATurboReactor smGetSmTurboReactor() {
         return smTurboReactor;
     }
 
-    public void smSetSmTurboReactor(SMTurboReactor smTurboReactor) {
+    public void smSetSmTurboReactor(SATurboReactor smTurboReactor) {
         this.smTurboReactor = smTurboReactor;
     }
 
-    public SMFuentePoder smGetSmFuentePoder() {
+    public SAFuentePoder smGetSmFuentePoder() {
         return smFuentePoder;
     }
 
-    public void smSetSmFuentePoder(SMFuentePoder asFuentePoder) {
+    public void smSetSmFuentePoder(SAFuentePoder asFuentePoder) {
         this.smFuentePoder = asFuentePoder;
     }
 

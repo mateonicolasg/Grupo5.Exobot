@@ -9,18 +9,18 @@ public class VEIabot {
     private Set<Integer> smSeriesUnicas;
     private int smCodigoSeguridad;
     private int smSerieUnica;
-    private SMFuentePoder smFuentePoder;
+    private SAFuentePoder smFuentePoder;
 
     public VEIabot(Hashtable<Integer, String> smMisiones) {
         this.smMisiones = smMisiones;
         smSeriesUnicas = new HashSet<>();
     }
 
-    public SMFuentePoder smGetSmFuentePoder() {
+    public SAFuentePoder smGetSmFuentePoder() {
         return smFuentePoder;
     }
 
-    public void smSetSmFuentePoder(SMFuentePoder smFuentePoder) {
+    public void smSetSmFuentePoder(SAFuentePoder smFuentePoder) {
         this.smFuentePoder = smFuentePoder;
     }
 

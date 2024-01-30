@@ -13,9 +13,9 @@ public class VEMecatronico {
         this.smLstHabilidades = smLstHabilidades;
     }
 
-    public VEExobot smArmarExobot(int smCodigo, int smSerieUnica, String smHabilidad, SMFuentePoder smFuentePoder){
-        SMExtremidadInferior smExtremidadInferior = new SMExtremidadInferior();
-        SMTurboReactor smTurboReactor = new SMTurboReactor();
+    public VEExobot smArmarExobot(int smCodigo, int smSerieUnica, String smHabilidad, SAFuentePoder smFuentePoder){
+        SAExtremidadInferior smExtremidadInferior = new SAExtremidadInferior();
+        SATurboReactor smTurboReactor = new SATurboReactor();
         SMBrazoDerecho smBrazoDerecho = new SMBrazoDerecho();
         SMBrazoIzquierdo smBrazoIzquierdo = new SMBrazoIzquierdo();
         if (smHabilidad.equals("defender")){

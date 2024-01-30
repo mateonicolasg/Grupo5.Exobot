@@ -5,7 +5,7 @@ public class SMMK61 implements FTIDispara, SMIArma {
     }
 
     @Override
-    public void smObtenerEnergia(SMFuentePoder smFuentePoder) {
+    public void smObtenerEnergia(SAFuentePoder smFuentePoder) {
         System.out.println("MK61 obteniendo energia");
     }
 }

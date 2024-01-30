@@ -1,3 +1,3 @@
 public interface FTIVuela {
-    public void ftVolar(SMFuentePoder smFuentePoder);
+    public void ftVolar(SAFuentePoder smFuentePoder);
 }

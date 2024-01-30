@@ -159,7 +159,7 @@ public class SMPatBattle {
             smSoldado = new SMSoldado("fuerte","atacar","agilidad");
             smIabot.smSetSmCodigoSeguridad(1234);
             smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
-            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smIabot.smSetSmFuentePoder(new SAFuentePoder("alto"));
             smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
             smSoldado.smSetSmExobot(smExobot);
             smPelotonAtaque.add(smSoldado);
@@ -171,7 +171,7 @@ public class SMPatBattle {
             smSoldado = new SMSoldado("fuerte","defender","agilidad");
             smIabot.smSetSmCodigoSeguridad(5678);
             smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
-            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smIabot.smSetSmFuentePoder(new SAFuentePoder("alto"));
             smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
             smSoldado.smSetSmExobot(smExobot);
             vePelotonDefensa.add(smSoldado);
@@ -183,7 +183,7 @@ public class SMPatBattle {
             smSoldado = new SMSoldado("fuerte","sabotaje","agilidad");
             smIabot.smSetSmCodigoSeguridad(9101);
             smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
-            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smIabot.smSetSmFuentePoder(new SAFuentePoder("alto"));
             smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
             smSoldado.smSetSmExobot(smExobot);
             vePelotonSabotaje.add(smSoldado);
@@ -195,7 +195,7 @@ public class SMPatBattle {
             smSoldado = new SMSoldado("fuerte","infiltracion","agilidad");
             smIabot.smSetSmCodigoSeguridad(1213);
             smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
-            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smIabot.smSetSmFuentePoder(new SAFuentePoder("alto"));
             smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
             smSoldado.smSetSmExobot(smExobot);
             vePelotonInfiltracion.add(smSoldado);
@@ -207,7 +207,7 @@ public class SMPatBattle {
             smSoldado = new SMSoldado("fuerte","rescate","agilidad");
             smIabot.smSetSmCodigoSeguridad(1415);
             smIabot.smSetSmSerieUnica(smIabot.smGenerarCodigoAleatorio());
-            smIabot.smSetSmFuentePoder(new SMFuentePoder("alto"));
+            smIabot.smSetSmFuentePoder(new SAFuentePoder("alto"));
             smExobot = smMecatronico.smArmarExobot(smIabot.smGetSmCodigoSeguridad(),smIabot.smGetSmSerieUnica(), smSoldado.veGetVeHabilidad(), smIabot.smGetSmFuentePoder());
             smSoldado.smSetSmExobot(smExobot);
             vePelotonRescate.add(smSoldado);

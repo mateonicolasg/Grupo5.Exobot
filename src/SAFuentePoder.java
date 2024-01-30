@@ -1,16 +1,16 @@
-public class SMFuentePoder {
-    private String smNivelEnergia;
+public class SAFuentePoder {
+    private String saNivelEnergia;
 
-    public SMFuentePoder(String smNivelEnergia) {
-        this.smNivelEnergia = smNivelEnergia;
+    public SAFuentePoder(String smNivelEnergia) {
+        this.saNivelEnergia = smNivelEnergia;
     }
 
     public String smGetSmNivelEnergia() {
-        return smNivelEnergia;
+        return saNivelEnergia;
     }
 
     public void smSetSmNivelEnergia(String smNivelEnergia) {
-        this.smNivelEnergia = smNivelEnergia;
+        this.saNivelEnergia = smNivelEnergia;
     }
 
     public void smOtogarEnergiaArma(SMIArma smArma){
