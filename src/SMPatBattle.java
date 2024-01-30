@@ -79,8 +79,8 @@ public class SMPatBattle {
             VESoldadoDefensa.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
             VESoldadoDefensa.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
             VESoldadoDefensa.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoDerecho().vmGetVmLanzaFuego().ftDisparar();
-            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoIzquierdo().vmGetVmMk61().smObtenerEnergia(VESoldadoDefensa.smGetSmExobot().smGetSmFuentePoder());
+            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoDerecho().esGetEsLanzaFuego().ftDisparar();
+            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoIzquierdo().esGetEsMk61().smObtenerEnergia(VESoldadoDefensa.smGetSmExobot().smGetSmFuentePoder());
             VESoldadoDefensa.smRecargarFuentePoder(smIabot);
             VESoldadoDefensa.smReemplazarFuentePoder(smIabot);
             System.out.println("------------------------------------------------");  
@@ -123,7 +123,7 @@ public class SMPatBattle {
             VESoldadoInfiltracion.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
             VESoldadoInfiltracion.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
             VESoldadoInfiltracion.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-            VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoDerecho().vmGetVmLaser().ftDisparar();
+            VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoDerecho()smGetEsLaser().ftDisparar();
             VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoIzquierdo();
             VESoldadoInfiltracion.smRecargarFuentePoder(smIabot);
             VESoldadoInfiltracion.smReemplazarFuentePoder(smIabot);
