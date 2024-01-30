@@ -1,11 +1,11 @@
-public class SMBazuca implements FTIDispara, SMIArma {
+public class ESBazuca implements FTIDispara, ESIArma {
     @Override
     public void ftDisparar() {
         System.out.println("Bum! La bazuca ha sido disparada");
     }
 
     @Override
-    public void smObtenerEnergia(SAFuentePoder smFuentePoder) {
+    public void esObtenerEnergia(SAFuentePoder smFuentePoder) {
         System.out.println("Bazuca obteniendo energia");
     }
 }
