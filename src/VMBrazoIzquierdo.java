@@ -1,19 +1,19 @@
 public class VMBrazoIzquierdo {
-    private SMBazuca vmBazuca;
-    private SMMK61 vmMk61;
+    private ESBazuca esBazuca;
+    private ESMK61 esMk61;
  
-    public VMBrazoIzquierdo(SMMK61 vmMk61) {
-        this.vmMk61 = vmMk61;
+    public VMBrazoIzquierdo(ESMK61 esMk61) {
+        this.esMk61 = esMk61;
     }
 
-    public VMBrazoIzquierdo(SMBazuca vmBazuca) {
-        this.vmBazuca = vmBazuca;
+    public VMBrazoIzquierdo(ESBazuca esBazuca) {
+        this.esBazuca = esBazuca;
     }
 
     public VMBrazoIzquierdo(){}
 
-    public SMBazuca vmGetVmBazuca() {
-        return vmBazuca;
+    public ESBazuca vmGetEsBazuca() {
+        return esBazuca;
     }
 
     public void vmSetVmBazuca(SMBazuca vmBazuca) {
