@@ -1,33 +1,33 @@
 public class VMBrazoDerecho {
-    private SMLaser vmLaser;
-    private SMLanzaFuego vmLanzaFuego;
+    private ESLaser esLaser;
+    private ESLanzaFuego esLanzaFuego;
 
     // Getter y setter
     
-    public SMLaser vmGetVmLaser() {
-        return vmLaser;
+    public ESLaser vmGetEsLaser() {
+        return esLaser;
     }
 
-    public void vmSetVmLaser(SMLaser vmLaser) {
-        this.vmLaser = vmLaser;
+    public void vmSetEsLaser(ESLaser esLaser) {
+        this.esLaser = esLaser;
     }
 
-    public SMLanzaFuego vmGetVmLanzaFuego() {
-        return vmLanzaFuego;
+    public ESLanzaFuego vmGetEsLanzaFuego() {
+        return esLanzaFuego;
     }
 
-    public void vmSetVmLanzaFuego(SMLanzaFuego vmLanzaFuego) {
-        this.vmLanzaFuego = vmLanzaFuego;
+    public void vmSetEsLanzaFuego(ESLanzaFuego esLanzaFuego) {
+        this.esLanzaFuego = esLanzaFuego;
     }
 
     public VMBrazoDerecho() {
     }
 
-    public VMBrazoDerecho(SMLaser vmLaser) {
-        this.vmLaser = vmLaser;
+    public VMBrazoDerecho(ESLaser esLaser) {
+        this.esLaser = esLaser;
     }
 
-    public VMBrazoDerecho(SMLanzaFuego vmLanzaFuego) {
-        this.vmLanzaFuego = vmLanzaFuego;
+    public VMBrazoDerecho(ESLanzaFuego esLanzaFuego) {
+        this.esLanzaFuego = esLanzaFuego;
     }   
 }

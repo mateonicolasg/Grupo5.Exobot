@@ -19,24 +19,24 @@ public class VEMecatronico {
         VMBrazoDerecho smBrazoDerecho = new VMBrazoDerecho();
         VMBrazoIzquierdo smBrazoIzquierdo = new VMBrazoIzquierdo();
         if (smHabilidad.equals("defender")){
-            smBrazoDerecho = new VMBrazoDerecho(new SMLanzaFuego());
-            smBrazoIzquierdo = new VMBrazoIzquierdo(new SMMK61());
+            smBrazoDerecho = new VMBrazoDerecho(new ESLanzaFuego());
+            smBrazoIzquierdo = new VMBrazoIzquierdo(new ESMK61());
         }
         else if (smHabilidad.equals("atacar")){
-            smBrazoDerecho = new VMBrazoDerecho(new SMLaser());
-            smBrazoIzquierdo = new VMBrazoIzquierdo(new SMBazuca());
+            smBrazoDerecho = new VMBrazoDerecho(new ESLaser());
+            smBrazoIzquierdo = new VMBrazoIzquierdo(new ESBazuca());
         }
         else if (smHabilidad.equals("sabotaje")){
-            smBrazoDerecho = new VMBrazoDerecho(new SMLaser());
-            smBrazoIzquierdo = new VMBrazoIzquierdo(new SMMK61());
+            smBrazoDerecho = new VMBrazoDerecho(new ESLaser());
+            smBrazoIzquierdo = new VMBrazoIzquierdo(new ESMK61());
         }
         else if (smHabilidad.equals("infiltracion")){
-            smBrazoDerecho = new VMBrazoDerecho(new SMLaser());
+            smBrazoDerecho = new VMBrazoDerecho(new ESLaser());
             smBrazoIzquierdo = new VMBrazoIzquierdo();
         }
         else if (smHabilidad.equals("rescate")){
-            smBrazoDerecho = new VMBrazoDerecho(new SMLanzaFuego());
-            smBrazoIzquierdo = new VMBrazoIzquierdo(new SMMK61());
+            smBrazoDerecho = new VMBrazoDerecho(new ESLanzaFuego());
+            smBrazoIzquierdo = new VMBrazoIzquierdo(new ESMK61());
         }  
         VEExobot smExobot = new VEExobot(smCodigo, smSerieUnica, smExtremidadInferior, smTurboReactor, smFuentePoder, smBrazoDerecho, smBrazoIzquierdo);
         return smExobot;

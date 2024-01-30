@@ -38,6 +38,7 @@ public class SMPatBattle {
 
         smColor = new SMColor();
     }
+
     
     public void veMostrarPelotonSabotaje(){
         smNroSoldado = 1;
@@ -79,7 +80,7 @@ public class SMPatBattle {
             VESoldadoInfiltracion.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
             VESoldadoInfiltracion.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
             VESoldadoInfiltracion.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-            VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoDerecho().vmGetVmLaser().ftDisparar();
+            VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoDerecho().vmGetEsLaser().ftDisparar();
             VESoldadoInfiltracion.smGetSmExobot().smGetSmBrazoIzquierdo();
             VESoldadoInfiltracion.smRecargarFuentePoder(smIabot);
             VESoldadoInfiltracion.smReemplazarFuentePoder(smIabot);
@@ -105,8 +106,8 @@ public class SMPatBattle {
             VESoldadoRescate.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
             VESoldadoRescate.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
             VESoldadoRescate.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-            VESoldadoRescate.smGetSmExobot().smGetSmBrazoDerecho().vmGetVmLanzaFuego().ftDisparar();
-            VESoldadoRescate.smGetSmExobot().smGetSmBrazoIzquierdo().vmGetVmMk61().smObtenerEnergia(VESoldadoRescate.smGetSmExobot().smGetSmFuentePoder());
+            VESoldadoRescate.smGetSmExobot().smGetSmBrazoDerecho().vmGetEsLanzaFuego().ftDisparar();
+            VESoldadoRescate.smGetSmExobot().smGetSmBrazoIzquierdo().vmGetVmMk61().esObtenerEnergia(VESoldadoRescate.smGetSmExobot().smGetSmFuentePoder());
             VESoldadoRescate.smRecargarFuentePoder(smIabot);
             VESoldadoRescate.smReemplazarFuentePoder(smIabot);
             System.out.println("------------------------------------------------");  
@@ -130,8 +131,8 @@ public class SMPatBattle {
             VESoldadoDefensa.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
             VESoldadoDefensa.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
             VESoldadoDefensa.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoDerecho().vmGetVmLanzaFuego().ftDisparar();
-            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoIzquierdo().vmGetVmMk61().smObtenerEnergia(VESoldadoDefensa.smGetSmExobot().smGetSmFuentePoder());
+            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoDerecho().vmGetEsLanzaFuego().ftDisparar();
+            VESoldadoDefensa.smGetSmExobot().smGetSmBrazoIzquierdo().vmGetVmMk61().esObtenerEnergia(VESoldadoDefensa.smGetSmExobot().smGetSmFuentePoder());
             VESoldadoDefensa.smRecargarFuentePoder(smIabot);
             VESoldadoDefensa.smReemplazarFuentePoder(smIabot);
             System.out.println("------------------------------------------------");  
@@ -140,7 +141,7 @@ public class SMPatBattle {
 
     public void veMostrarPelotonAtaque(){
         System.out.println(smColor.SMWHITE +"\nPELOTONES RUSOS" + smColor.SMBLUE + " LISTOS PARA" + smColor.SMRED + " LA BATALLA" + smColor.SMRESET);
-        
+        smNroSoldado = 1;
         smCrearPelotonAtaque();
         System.out.println(smColor.SMRED +"\nPELOTON DE ATAQUE:" + smColor.SMRESET);
         System.out.println("------------------------------------------------");
@@ -156,8 +157,8 @@ public class SMPatBattle {
             smSoldadoAtaque.smGetSmExobot().smGetSmExtremidadInferior().ftSaltar(50);
             smSoldadoAtaque.smGetSmExobot().smGetSmExtremidadInferior().ftCorrer(200);
             smSoldadoAtaque.smGetSmExobot().smGetSmTurboReactor().ftVolar(smExobot.smGetSmFuentePoder());
-            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoDerecho().vmGetVmLaser().ftDisparar();
-            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoIzquierdo().vmGetVmBazuca().smObtenerEnergia(smSoldadoAtaque.smGetSmExobot().smGetSmFuentePoder());
+            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoDerecho().vmGetEsLaser().ftDisparar();
+            smSoldadoAtaque.smGetSmExobot().smGetSmBrazoIzquierdo().vmGetEsBazuca().esObtenerEnergia(smSoldadoAtaque.smGetSmExobot().smGetSmFuentePoder());
             smSoldadoAtaque.smRecargarFuentePoder(smIabot);
             smSoldadoAtaque.smReemplazarFuentePoder(smIabot);
             System.out.println("------------------------------------------------");  

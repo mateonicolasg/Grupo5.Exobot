@@ -13,7 +13,7 @@ public class SAFuentePoder {
         this.saNivelEnergia = smNivelEnergia;
     }
 
-    public void smOtogarEnergiaArma(SMIArma smArma){
+    public void smOtogarEnergiaArma(ESIArma smArma){
         System.out.println("Otorgando energia al arma");
     }
     public void smOtorgarEnergiaSistema(){
