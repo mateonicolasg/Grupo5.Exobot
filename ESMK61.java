@@ -1,4 +1,4 @@
-public class SMMK61 implements FTIDispara, SMIArma {
+public class ESMK61 implements FTIDispara, ESIArma {
     @Override
     public void ftDisparar() {
         System.out.println("disparando una rafaga de balas");
