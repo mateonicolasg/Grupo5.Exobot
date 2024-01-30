@@ -6,12 +6,12 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
     private SAExtremidadInferior smExtremidadInferior;
     private SATurboReactor smTurboReactor;
     private SAFuentePoder smFuentePoder;
-    private SMBrazoDerecho smBrazoDerecho;
-    private SMBrazoIzquierdo smBrazoIzquierdo;
+    private VMBrazoDerecho smBrazoDerecho;
+    private VMBrazoIzquierdo smBrazoIzquierdo;
 
     public VEExobot(int veCodigoSeguridad, int smSerieUnica, SAExtremidadInferior smExtremidadInferior,
-        SATurboReactor smTurboReactor, SAFuentePoder smFuentePoder, SMBrazoDerecho smBrazoDerecho,
-        SMBrazoIzquierdo smBrazoIzquierdo) {
+        SATurboReactor smTurboReactor, SAFuentePoder smFuentePoder, VMBrazoDerecho smBrazoDerecho,
+        VMBrazoIzquierdo smBrazoIzquierdo) {
         this.veCodigoSeguridad = veCodigoSeguridad;
         this.smSerieUnica = smSerieUnica;
         this.smExtremidadInferior = smExtremidadInferior;
@@ -53,19 +53,19 @@ public class VEExobot implements FTIAlumnoEspanol, FTIAlumnoIngles {
         this.smFuentePoder = asFuentePoder;
     }
 
-    public SMBrazoDerecho smGetSmBrazoDerecho() {
+    public VMBrazoDerecho smGetSmBrazoDerecho() {
         return smBrazoDerecho;
     }
 
-    public void smSetSmBrazoDerecho(SMBrazoDerecho smBrazoDerecho) {
+    public void smSetSmBrazoDerecho(VMBrazoDerecho smBrazoDerecho) {
         this.smBrazoDerecho = smBrazoDerecho;
     }
 
-    public SMBrazoIzquierdo smGetSmBrazoIzquierdo() {
+    public VMBrazoIzquierdo smGetSmBrazoIzquierdo() {
         return smBrazoIzquierdo;
     }
 
-    public void smSetSmBrazoIzquierdo(SMBrazoIzquierdo smBrazoIzquierdo) {
+    public void smSetSmBrazoIzquierdo(VMBrazoIzquierdo smBrazoIzquierdo) {
         this.smBrazoIzquierdo = smBrazoIzquierdo;
     }
 
